@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- METADATA AND SCRIPT REFERENCES -->
+    <head>
+        <title>ohanes.ai</title>
+        <meta charset="utf-8">
+        <link rel="icon" href="http://www.ohanes.ai/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    
+    <!-- CSS -->
+    <style>
+    .jumbotron {
+       background-color: #0c67a0;
+       color: #ffffff;
+    }
+    .bg-grey {
+        background-color: #f6f6f6;
+    }
+    .jumbotron {
+        background-color: #0c67a0;
+        color: #fff;
+        padding: 100px 25px;
+    }
+    .container-fluid {
+        padding: 60px 50px;
+    }
+    .logo {
+        font-size: 200px;
+    }
+    @media screen and (max-width: 768px) {
+        .col-sm-4 {
+            text-align: center;
+            margin: 25px 0;
+        }
+    }
+    .navbar {
+        margin-bottom: 0;
+        background-color: #0c67a0;
+        z-index: 9999;
+        border: 0;
+        font-size: 12px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+    }
+    .navbar li a, .navbar .navbar-brand {
+        color: #fff !important;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #f4511e !important;
+        background-color: #fff !important;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #fff !important;
+    }
+    </style>
+
+    <!-- CONTENT-->
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <ul>
+                    <a class="navbar-brand" href="#myPage">ohanes.ai</a>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavBar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#projects">PROJECTS</a></li>
+                        <li><a href="#publications">PUBLICATIONS</a></li>
+                        <li><a href="http://code.ohanes.ai" target="_blank">CODE</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- BANNER  -->
+        <div class="jumbotron text-center">
+            <h1>ohanes.ai</h1>
+            <p>This is the home of Ohanes Dadian's research & development in Artificial Intelligence and Machine Learning for Autonomous and Unmanned Systems.</p>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>About ohanes.ai</h2>
+                    <p>Ohanes holds a Master of Science in Computer Science, with an emphasis on Theoretical CS and Artificial Intelligence, from Cal Poly Pomona.</p>
+                    <p>Ohanes publishes papers with the AIAA and IEEE on topics such as neural networks, computer vision, and avionics architecture.</p>
+                    <button class="btn btn-default btn-lg">Contact</button>
+                </div>
+                <div>
+                    <span class="col-sm-4">
+                        <span class="glyphicon glyphicon-send logo"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODELS -->
+        <div class="container-fluid bg-grey">
+            <h2>ANNIE</h2>
+            <h4><b>A</b>riticial <b>N</b>eural <b>N</b>etwork <b>I</b>nducing <b>E</b>chos</h4>
+            <p>
+                As the pursuit for developing next-generation flight control systems continues, 
+                so does the need for intelligent agents which are capable of providing increased autonomy and 
+                stability while ensuring safety. Many different models have been utilized in the past, such as 
+                gain scheduling. However these techniques tend to incur destability when dealing with varying 
+                weather conditions. This is due to their inability to handle nonlinearity in the model. To solve 
+                this problem, a nonlinear model is required. One that can be trained offline and adapt in-mission. 
+                There are many models to perform the parameter tuning involved for providing stability to aircraft. 
+                This thesis showcases one such application, utilizing a recurrent neural network for providing 
+                intelligent nonlinear control. Funded by the National Science Foundation (NSF), I have been conducting an effort to develop 
+                adaptive flight controllers for unmanned aerial vehicles. The current focus is on an echo state 
+                network for performing nonlinear control. It was chosen due to its close adherence to classical 
+                control law. An introduction to neural networks and echo state networks is given to provide 
+                context of the subject matter. This is followed by a literature survey of current implementations of 
+                recurrent neural networks in flight control systems. A discussion is then given on our research goals, 
+                focusing on the echo state network and its role within our intelligent flight control system (IFCS). 
+                The methodology used to accomplish these goals is then given; both the MATLAB-based prototype and the
+                 C++ implementation. The closed-loop simulation system is detailed, including offline and online training 
+                 using the FlightGear flight simulator and Athena Vortex Lattace (AVL) flight dynamics analyzer.
+                 The thesis concludes with evaluation of results generated during software-in-the-loop and flight testing.
+            </p>
+        </div>
+        <div class="container-fluid bg-grey">
+            <h2>Vision based Target Recognition for Unmanned Systems</h2>
+            <p>
+                The computer vision system developed sits onboard a fixed-wing UAV, and is used to identify the targets and determine their geographical
+                location autonomously. For target identification, OpenCV Computer Vision Library, an open source library for
+                target identification and tracking is used. 18 Potential targets are identified by a UAV and their locations are
+                communicated to the second UAV, UGV, and GCS. It is a crucial part of the mission’s scanning phase. The
+                algorithm is implemented in the C++ programming language using the OpenCV Computer Vision library. Testing
+                trials were performed on a PC-104 based ReadyBoard computer running the Debian GNU/Linux operating system.
+                The trails entailed a series of run-throughs against a red ball as the target being recorded by a gimbaled camera
+                onboard the UAV as the Sig Kadet performs a fly-over. The system determines the object of interest’s geolocation,
+                shape, and color. The software goes through a multi-pass series of acquisition, preprocessing, segmentation, and
+                identification.
+                For this effort, OpenCV 2.4.9 library was used. The library runs at the heart of our image processing stack,
+                particularly within the image acquisition code, which is a modified algorithm taken from the Flea3 FlyCapture
+                Software Development Kit (SDK).
+            </p>
+        </div>
+
+        <!-- SUBJECTS -->
+        <div class="container-fluid text-center">
+            <h2>SUBJECTS</h2>
+            <br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-qrcode"></span>
+                    <h4>Articial Neural Networks</h4>
+                </div>
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <h4>Computer Vision</h4>
+                </div>
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-plane"></span>
+                    <h4>Avionics</h4>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-subscript"></span>
+                    <h4>Automated Therom Proving</h4>
+                </div>
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-queen"></span>
+                    <h4>Fuzzy Logic</h4>
+                </div>
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-barcode"></span>
+                    <h4>Genetic Algorithms</h4>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
